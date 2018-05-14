@@ -1,6 +1,5 @@
 package com.example.admin.viewstubdemo;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -21,13 +20,6 @@ public class MainActivity extends AppCompatActivity {
         mNoDataStub = findViewById(R.id.nodata_layout);
         mNetErrorStub = findViewById(R.id.noerror_layout);
         goActivity = findViewById(R.id.go);
-        goActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
-                startActivity(intent);
-            }
-        });
 
         new TextCreator(this)
                 .addTextOfColor("蓝色", R.color.colorPrimary)
@@ -36,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
                 .addText("默认颜色")
                 .builder(goActivity);
 
-//        showNoData();
+        showNoData();
 //        showNetError();
     }
 
